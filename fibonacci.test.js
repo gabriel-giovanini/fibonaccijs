@@ -1,17 +1,13 @@
-const fibonacci = require('../fibonacci'); // ajuste o caminho conforme seu projeto
+const fibonacci = require('./fibonacci');
 
-describe('Função Fibonacci', () => {
-  test('calcula corretamente valores da sequência', () => {
-    expect(fibonacci(0)).toBe(0);
-    expect(fibonacci(1)).toBe(1);
-    expect(fibonacci(2)).toBe(1);
-    expect(fibonacci(3)).toBe(2);
-    expect(fibonacci(5)).toBe(5);
-    expect(fibonacci(10)).toBe(55);
-  });
+test('gera os 5 primeiros números de Fibonacci', () => {
+  expect(fibonacci(5)).toEqual([0, 1, 1, 2, 3]);
+});
 
-  test('retorna undefined para n negativo', () => {
-    expect(fibonacci(-1)).toBeUndefined();
-    expect(fibonacci(-5)).toBeUndefined();
-  });
+test('retorna array vazio para n <= 0', () => {
+  expect(fibonacci(0)).toEqual([]);
+});
+
+test('retorna apenas [0] para n = 1', () => {
+  expect(fibonacci(1)).toEqual([0]);
 });
