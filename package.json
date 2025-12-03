@@ -1,8 +1,8 @@
 {
-  "name": "multiplicador-node",
+  "name": "fibonacci-node",
   "version": "1.0.0",
   "description": "Projeto Node.js para multiplicação com testes",
-  "main": "multiplicar.js",
+  "main": "fibonacci.js",
   "scripts": {
     "test": "jest"
   },
